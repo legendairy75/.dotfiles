@@ -2,10 +2,10 @@
 #source ~/.local/share/omakub/defaults/bash/rc
 
 # export PATH=/home/legendairy/.local/share/mise/installs/node/20.16.0/bin:$PATH
-export PATH=$PATH:/home/legendairy/.local/bin:$PATH
+export PATH=$PATH:/home/$USER/.local/bin:$PATH
 # If you come from bash you might have to change y#our $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH="$PATH:/home/legendairy/.local/share/JetBrains/Toolbox/scripts:$PATH"
+export PATH="$PATH:/home/$USER/.local/share/JetBrains/Toolbox/scripts:$PATH"
 
 # export OPEN_WEATHER_API_KEY= "5bea91a1e11a0ffa65574e3d73d4097d"
 
@@ -73,7 +73,7 @@ eval "$(oh-my-posh init zsh --config ~/ghost.omp.json)"
 export OPEN_WEATHER_API_KEY='384b143e22f5f29ea6fd067aeca3b7f4'
 
 # pnpm
-export PNPM_HOME="/home/legendairy/.local/share/pnpm"
+export PNPM_HOME="/home/$USER/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -81,10 +81,10 @@ esac
 # pnpm end
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/legendairy/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/legendairy/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/legendairy/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/legendairy/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/home/legendairy/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/legendairy/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+#
+# # The next line enables shell command completion for gcloud.
+# if [ -f '/home/legendairy/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/legendairy/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Yazi
 function y() {
@@ -98,17 +98,17 @@ function y() {
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/legendairy/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/legendairy/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/legendairy/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/legendairy/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/legendairy/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/legendairy/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/legendairy/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/legendairy/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
