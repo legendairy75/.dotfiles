@@ -1,10 +1,31 @@
 # File system
-alias ls='eza -lh --group-directories-first --icons'
-alias lsa='ls -a'
-alias lt='eza --tree --level=2 --long --icons --git'
-alias lta='lt -a'
-alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+#alias ls='eza -lh --group-directories-first --icons'
+#alias lsa='ls -a'
+#alias lt='eza --tree --level=2 --long --icons --git'
+#alias lta='lt -a'
+alias fuz="fzf --preview 'bat --style=numbers --color=always {}'"
 alias fd='fdfind'
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias swayconfig="nvim ~/.config/sway/config"
+alias zel="zellij"
+alias zela="zellij a"
+alias mongs="sudo systemctl start mongod"
+alias mongx="sudo systemctl stop mongod"
+alias Pdoc="cd ~/Doc/Portfolio/"
+alias posh="pwsh"
+alias deb="ssh 192.168.1.22"
+alias pn="pnpm"
+alias pni="pnpm install"
+alias pnu="pnpm update"
+alias pns="pnpm start"
+alias pnt="pnpm test"
+alias pnb="pnpm build"
+alias pnr="pnpm run"
+alias pnl="pnpm list"
+alias dlx="pnpm dlx"
+alias ff="pokeget gengar --hide-name | fastfetch --file-raw -"
+alias fz="fzf --preview 'bat --color=always {}'"
 # alias cd='~'
 
 # Directories
