@@ -12,7 +12,7 @@
     "yellow": "#eed49f"
   },
   "transient_prompt": {
-    "template": " \ue285 ",
+    "template": " {{ .PWD }} \ue285 ",
     "foreground": "#FEF5ED",
     "background": "transparent"
   },

@@ -1,8 +1,8 @@
 # File system
-#alias ls='eza -lh --group-directories-first --icons'
-#alias lsa='ls -a'
-#alias lt='eza --tree --level=2 --long --icons --git'
-#alias lta='lt -a'
+alias ls='eza -lh --group-directories-first --icons'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
 alias fuz="fzf --preview 'bat --style=numbers --color=always {}'"
 alias fd='fdfind'
 alias zshconfig="nvim ~/.zshrc"
@@ -35,6 +35,7 @@ alias fz="fzf --preview 'bat --color=always {}'"
 
 # Tools
 alias n='nvim'
+alias e='emacsclient -c -a emacs'
 alias g='git'
 alias d='docker'
 alias r='rails'
@@ -57,3 +58,10 @@ webm2mp4() {
   output_file="${input_file%.webm}.mp4"
   ffmpeg -i "$input_file" -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 192k "$output_file"
 }
+
+#misc
+alias vterm='emacs --eval "(vterm)"'
+alias ipy="ipython"
+alias of="onefetch"
+alias rpi="kitten ssh legendairy@192.168.1.46"
+alias info='info --vi-keys'

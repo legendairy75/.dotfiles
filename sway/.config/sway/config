@@ -3,7 +3,7 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-
+include catppuccin-mocha
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -15,28 +15,29 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
+set $editor emacsclient -c -a emacs
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu ulauncher
+set $menu wmenu-run
 
 set $img /home/legendairy/Pictures/pexels-lucasmenesesphoto-7156911.jpg
 # dmenu_path | wmenu | xargs swaymsg exec --
 
 ### Appearance
 # window corner radius in px
-corner_radius 5
+# corner_radius 5
 
 # Window background blur
-blur enable
-blur_xray off
-blur_passes 2
-blur_radius 5
+# blur enable
+# blur_xray off
+# blur_passes 2
+# blur_radius 5
 
-shadows enable
-shadows_on_csd off
-shadow_blur_radius 20
-shadow_color #0000007F
+# shadows enable
+# shadows_on_csd off
+# shadow_blur_radius 20
+# shadow_color #0000007F
 
 # Window Title Bar
 #
@@ -47,30 +48,31 @@ shadow_color #0000007F
 	titlebar_padding 1
 	titlebar_border_thickness 0
 
-    set $white FFFFFF
+    # set $white FFFFFF
 	# 0.80 opacity
-	set $transparent_white FFFFFFCC 
-	set $transparent_red F52023CC
-	set $blue 010015
-	set $transparent_blue 010015CC
-	set $yellow FFFF00
-	set $transparent 00000000
-	
-	set $unfocused $transparent_white $blue $transparent_white
-	client.unfocused $unfocused
-	client.focused_inactive $unfocused
-	client.focused_tab_title $unfocused
+	# set $transparent_white FFFFFFCC
+	# set $transparent_red F52023CC
+	# set $blue 010015
+	# set $transparent_blue 010015CC
+	# set $yellow FFFF00
+	# set $transparent 00000000
 
-	client.focused $transparent_white $white $transparent_blue $transparent_blue
-	client.urgent $transparent_red $transparent_red $white
+	# set $unfocused $transparent_white $blue $transparent_white
+	client.unfocused $overlay0 $base $text $rosewater $overlay0
+	client.focused_inactive $overlay0 $base $text $rosewater $overlay0
+	client.focused_tab_title $overlay0 $base $text $rosewater $overlay0
+
+	client.focused $sky $base $text $rosewater $sky
+    #$transparent_white $white $transparent_blue $transparent_blue
+	client.urgent $peach $base $peach $overlay0 $peach
 
 # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
-default_dim_inactive 0.0
-dim_inactive_colors.unfocused #000000FF
-dim_inactive_colors.urgent #900000FF
+# default_dim_inactive 0.0
+# dim_inactive_colors.unfocused #000000FF
+# dim_inactive_colors.urgent #900000FF
 
 # Move minimized windows into Scratchpad (enable|disable)
-scratchpad_minimize disable
+# scratchpad_minimize disable
 
 ### Output configuration
 #
@@ -121,8 +123,10 @@ exec $term
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    bindsym $mod+t exec $editor 
+
 # start browser
-    bindsym $mod+Shift+Return exec google-chrome-stable
+    bindsym $mod+Shift+Return exec qutebrowser
 
     # bindsym Alt+Space exec krunner
 
@@ -134,6 +138,7 @@ exec $term
 
 # lock screen 
     bindsym $mod+Ctrl+l exec swaylock -i $img
+    bindsym $mod+Ctrl+s exec systemctl suspend
 
     # exec swayidle -w \
     #     timeout 300  'swaymsg output \* dpms off' \
