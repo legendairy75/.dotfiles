@@ -65,3 +65,34 @@ alias ipy="ipython"
 alias of="onefetch"
 alias rpi="kitten ssh legendairy@192.168.1.46"
 alias info='info --vi-keys'
+
+#ml4w
+alias wifi='nmtui'
+alias apps='~/.config/ml4w/bin/ml4w-apps.sh'
+alias screenshot='~/.config/ml4w/bin/ml4w-screenshot.sh'
+alias updates='~/.config/ml4w/scripts/installupdates.sh'
+alias filemanager='~/.config/ml4w/settings/filemanager'
+alias lock='hyprlock'
+alias clock='tty-clock'
+alias system='~/.config/ml4w/settings/systemmonitor'
+alias quick='~/.config/ml4w/bin/ml4w-quicklinks.sh'
+alias wallpaper='~/.config/ml4w/bin/ml4w-wallpaper.sh'
+
+# -----------------------------------------------------
+# ML4W Apps
+# -----------------------------------------------------
+alias ml4w='flatpak run com.ml4w.welcome'
+alias ml4w-settings='flatpak run com.ml4w.settings'
+alias ml4w-calendar='flatpak run com.ml4w.calendar'
+alias ml4w-hyprland='flatpak run com.ml4w.hyprlandsettings'
+alias ml4w-sidebar='flatpak run com.ml4w.sidebar'
+
+# -----------------------------------------------------
+# Scripts
+# -----------------------------------------------------
+alias ascii='~/.config/ml4w/scripts/figlet.sh'
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'

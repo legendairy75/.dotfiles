@@ -7,5 +7,6 @@ path=(
   $HOME/.config/emacs/bin
   $HOME/.cargo/bin
   $HOME/.spicetify
+  $HOME/.bun/bin
   $path
 )
