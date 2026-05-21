@@ -5,7 +5,8 @@ plugins=(
   extract kitty last-working-dir
   man magic-enter mongocli wd
   web-search dnf frontend-search
-  docker tldr
+  docker tldr zsh-autosuggestions
+  z
 )
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
