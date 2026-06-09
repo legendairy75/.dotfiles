@@ -1,3 +1,4 @@
+MAGIC_ENTER_OTHER_COMMAND='ls .'
 plugins=(
   git vscode sudo hitchhiker
   aliases tmux copyfile 

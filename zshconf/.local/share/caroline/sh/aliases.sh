@@ -1,5 +1,6 @@
 # File system
-alias ls='eza -lh --group-directories-first --icons'
+# alias ls='eza -lh --group-directories-first --icons'
+alias ls='nu -c "ls -l"'
 alias la='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'

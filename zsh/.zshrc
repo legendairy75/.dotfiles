@@ -77,24 +77,24 @@ bindkey -M viins '^e' _prep-nvim
 
 
 # Inline calculator: type "= expression"
-_calc_line() {
-  local expr="${BUFFER#= }"
-  BUFFER="$(qalc -t "$expr")"
-  CURSOR=$#BUFFER
-}
-zle -N _calc_line
+# _calc_line() {
+#   local expr="${BUFFER#= }"
+#   BUFFER="$(qalc -t "$expr")"
+#   CURSOR=$#BUFFER
+# }
+# zle -N _calc_line
 # When line starts with "=" → calculate
-bindkey -M viins '=' self-insert
-bindkey -M viins '^M' _calc_or_accept
+# bindkey -M viins '=' self-insert
+# bindkey -M viins '^M' _calc_or_accept
 
-_calc_or_accept() {
-  if [[ "$BUFFER" == "= "* ]]; then
-    _calc_line
-  else
-    zle accept-line
-  fi
-}
-zle -N _calc_or_accept
+# _calc_or_accept() {
+#   if [[ "$BUFFER" == "= "* ]]; then
+#     _calc_line
+#   else
+#     zle accept-line
+#   fi
+# }
+# zle -N _calc_or_accept
 
 join-last-command() {
   local last="${history[$((HISTCMD-1))]}"
