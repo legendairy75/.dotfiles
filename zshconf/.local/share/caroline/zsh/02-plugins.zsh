@@ -7,7 +7,7 @@ plugins=(
   man magic-enter mongocli wd
   web-search dnf frontend-search
   docker tldr zsh-autosuggestions
-  z
+  zoxide
 )
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
